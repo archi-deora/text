@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo "This is build step"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'bash text1.java'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "Deployed succesfully"
+            }
+        }
+    }
+}
